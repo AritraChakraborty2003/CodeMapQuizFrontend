@@ -1,4 +1,4 @@
-HTML CODE : 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,31 +7,60 @@ HTML CODE :
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="quizarea.css">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="continer background">
-        <div class="first">
+  
+ <div class="backContainer">
+    
+    <div class="background container">
+        <div class="timerContainer" style="display: flex; justify-content:center;;">
+            <div class="borderTimer" style="border: 4px solid white;">
+                    <p class="timeText">30</p>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 3vmin;">
+        <div class="first col-lg-6 ">
             <div class="text">
-                Question 1/4 
+                <p class="questHeader" style="margin-left:2vmin;">Question <span class="qno">1</span>/10</p> 
             </div>
             <div class="question">
-                What is the Capital of france ? 
+                <p class="questText">What invented Python ?</p>
                 
             </div>
-         <div class="second">
+         </div>
+         <div class="second col-lg-6 ">
 
-                  <div class="container">
+                  <div class="container optionHolder" style="  padding-bottom: 4vmin;height: 100%;display: flex;  align-items: center ;flex-direction: column;">
 
-                       <div class="option1"> Option 1</div>
-                       <div class="option2"> Option2 </div>
-                       <div class="option3"> Option3 </div>
-                       <div class="option4"> Option4 </div>
+                       <div class="option1 opt"> 
+                        
+                <input type="radio" id="opt_1" name="ans" value="a">
+                <label id="opt1" for="opt" class="optx" style="">Guido Von Rossum</label>
+                       </div>
+                       <div class="option2 opt">      <input type="radio" id="opt_2" name="ans" value="b">
+                        <label id="opt2" for="opt_2"  class="optx"style="">Tim Berners Lee</label>
+                        </div>
+                       <div class="option3 opt"> 
+                              
+                <input type="radio" id="opt_3" name="ans" value="c">
+                <label id="opt3" for="opt_3" class="optx" style="">Brian Keringham</label>
+                       </div>
+                       <div class="option4 opt"> 
+                        <input type="radio" id="opt_4" name="ans" value="d">
+                <label id="opt4" for="opt_4" class="optx" style="">James Gosling</label>
+                    </div>
 
                      </div>
          </div>
+
+        </div>
     </div>
-    <div> 
-    
+
+    </div>
 </body>
 </html>
 
@@ -43,87 +72,80 @@ HTML CODE :
     box-sizing : border-box ; 
 
 }
-.background {
-    display: flex;
-    justify-content: center;
-     align-items: center ;
-    height: 100vh ;
-    width : 100% ;
-    background-color: #97D1FF;
-}
-.second {
-    display: flex ;
-    justify-content: center ; 
-    align-items: center ;
-    padding-left: 420px  ;
-    height : 370px ; 
-    width : 780px ; 
-    background-color: #3F4964 ;
-    border-radius: 15px ;
-}
-.text {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white ;
-    font-size: 50px ;
-    position:  relative ;
-     top: 100px ;
-     left : 25px ; 
-}
-.question {
-    position: relative ; 
-    top: 120px ;
-    left: 25px ;
-    font-family: Arial, Helvetica, sans-serif ;
-    font-size: 20px ; 
-    color: white ;
-}
-
-.option1 {
-    height: 50px ;
-    width: 289px ;
-    background-color: #3F4865 ;
-    border-radius: 16px ;
-    border: 6px solid #455E7C ;
-    color: white ;
-    padding: 10px ;
-
-   }
-   .option2 {
-    height: 50px ;
-    width: 289px ;
-    background-color: #3F4865  ;
-    border-radius: 16px ;
-    margin-top: 28px ;
-    border: 6px solid #455E7C ;
+body{
+       
+        background-color: rgb(71, 161, 217);
+    }
+.background{
+    width:120vmin;
     color: white;
-    padding: 10px ;
-    
-   }
-   .option3 {
-    height: 50px ;
-    width: 289px ;
-    background-color: #3F4865 ;
-    border-radius: 16px ;
-    margin-top: 28px ;
-    border: 6px solid #455E7C ;
-    color: white ;
-    padding: 10px ;
-    
+    padding-top: 3vmin;
+    padding-bottom: 5.5vmin;
+    background-color: #3F4865  ;
+    border-radius: 3vmin;
+  
+}
 
+.backContainer{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1.5vmin;
+        height: 100vh; width: 97vw;
+}
+.questHeader{
+    font-size: 4vmin;
+}
+.questText{
+    font-size: 3.5vmin;
+    margin-left: 2vmin;
+}
+.opt{
+    border:1px solid white;
+    padding: 2vmin;
+    width: 100%;
+    border-radius:3vmin;
+    margin-top: 2.5vmin;
+}
+@media(max-width:800px){
+    .questHeader,.questText{
+        font-size: 4.5vmin;
+    }
+    .qno{
+        font-size: 6.5vmin;
+    }
+    .optx{
+        font-size: 4.5vmin;
+    }
+    .opt{
+        margin-left: -3.5vmin;
+        margin-top: 4.5vmin;
+    }
+    .borderTimer{
+        height:12vmin;width: 12vmin;
+        border-radius: 6vmin;
+    }
+    .timerContainer{
+        height: 12vmin;
+    }
+    .timeText{
+        margin-top: 1.5vmin;
+        margin-left: 2vmin;
+    }
+ 
+}
+@media(min-width:801px){
+    .borderTimer{
+        height:9vmin;width: 9vmin;
+        border-radius: 4.5vmin;
+    }
+    .timerContainer{
+        height: 7vmin;
+    }
+    .timeText{
+        margin-top: 1.75vmin;
+        margin-left: 2.5vmin;
+    }
 
-    
-   }
-   .option4  {
-    height: 50px ;
-    width: 289px ;
-    background-color:#3F4865;
-    border-radius: 16px ;
-    margin-top: 28px ;
-    border: 6px solid #455E7C ;
-    color : white ;
-    padding: 10px ; 
-
-    
-   }
-
+}
 </style>
